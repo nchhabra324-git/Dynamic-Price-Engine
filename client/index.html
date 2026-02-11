@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Pricing Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="dashboard">
+        <div class="header">
+            <h1>👟 Super Cloud Sneaker</h1>
+            <p>Live Market Data</p>
+        </div>
+
+        <div class="price-box">
+            <div id="price">Loading...</div>
+            <div style="font-size: 0.8rem; color: #aaa;">Current Live Price</div>
+        </div>
+        
+        <div class="stock-display">
+            📦 Stock Remaining: <span id="stock-count">--</span>
+        </div>
+
+        <canvas id="priceChart"></canvas>
+
+        <button id="btn-buy" class="btn-buy" onclick="buyProduct()">
+            💳 BUY NOW ($<span id="buy-price">--</span>)
+        </button>
+
+        <div class="controls">
+            <button class="btn-simulate" onclick="simulateTraffic()">
+                🚀 Add 10 Views
+            </button>
+            <button class="btn-reset" onclick="resetData()">
+                🔄 Reset Stock & Price
+            </button>
+        </div>
+
+        <p class="status">System Status: <span id="connection-status">Connecting...</span></p>
+    </div>
+
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

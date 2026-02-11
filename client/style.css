@@ -1,0 +1,115 @@
+/* client/style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.dashboard {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #00d2ff;
+    text-shadow: 0 0 10px rgba(0, 210, 255, 0.5);
+}
+
+.price-box {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 20px 0;
+    border: 1px solid #333;
+}
+
+#price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #4ade80; /* Green */
+    transition: color 0.3s ease;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: transform 0.1s, opacity 0.2s;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.btn-simulate {
+    background: linear-gradient(45deg, #ff0099, #493240);
+    color: white;
+}
+
+.btn-reset {
+    background: #333;
+    color: #ccc;
+}
+
+.status {
+    margin-top: 20px;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+canvas {
+    max-height: 150px;
+}
+
+/* Add to client/style.css */
+
+/* ... keep previous styles ... */
+
+.stock-display {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ffcc00; /* Yellow */
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgba(255, 204, 0, 0.5);
+}
+
+.btn-buy {
+    width: 100%;
+    background: linear-gradient(45deg, #00d2ff, #3a7bd5);
+    color: white;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    box-shadow: 0 4px 15px rgba(0, 210, 255, 0.4);
+}
+
+.btn-buy:active {
+    transform: scale(0.98);
+}
+
+.btn-buy:disabled {
+    background: #555;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
